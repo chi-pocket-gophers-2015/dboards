@@ -1,0 +1,19 @@
+  <div class="sort_by">
+    Sort by:
+    <select value="sort">
+      <option value="Date">Date</option>
+      <option value="Cohort">Cohort</option>
+      <option value="Phase">Phase</option>
+      <option value="Language">Language</option>
+    </select>
+  </div>
+
+<div class="container">
+  <% @entries.each do |entry| %>
+    <span class="img-index">
+      <a href="entry/<%= entry.id %>">
+        <img src="/uploads/<%= entry.id %>/1.png" />
+      </a>
+    </span>
+  <% end %>
+</div>
